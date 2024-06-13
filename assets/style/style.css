@@ -1,0 +1,197 @@
+body {
+    background-color: rgb(250, 250, 250);
+    font-family: Helvetica, sans-serif;
+}
+
+.wrapper {
+    max-width: 93vw;
+    margin: 2% auto;
+    position: relative; /* Aggiunto per consentire il posizionamento assoluto di metadati */
+}
+
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Allinea gli elementi a sinistra */
+    white-space: nowrap; /* Impedisce il ritorno a capo */
+    margin-bottom: 10px; /* Aggiunto margine inferiore */
+}
+
+.button-wrapper span {
+    font-size: 18px;
+    color: black;
+    margin-right: 10px; /* Spazio tra il testo "Ordina per" e i bottoni */
+}
+
+.button {
+    background-color: white; 
+    color: black; 
+    border: 1px solid black;
+    border-radius: 10px; /* Arrotonda i bordi */
+    padding: 8px 16px; /* Riduce l'altezza dei bottoni */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Riduce leggermente la dimensione del testo */
+    margin: 4px 10px; /* Aggiunge spazio tra i bottoni */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: black; /* Sfondo nero al passaggio del mouse */
+    color: white; /* Testo bianco al passaggio del mouse */
+}
+
+.button.active {
+    background-color: black; /* Sfondo nero quando è attivo */
+    color: white; /* Testo bianco quando è attivo */
+}
+.metadati {
+    background-color: transparent; /* Rimuove il colore di sfondo */
+    color: black; /* Colore del testo */
+    font-size: 14px; /* Dimensione del testo */
+    text-decoration: underline; /* Sottolinea il testo */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    margin-left: auto; /* Spinge a destra */
+    transition-duration: 0.4s; /* Durata della transizione */
+    border: none; /* Rimuove il bordo */
+    padding: 0; /* Rimuove il padding */
+}
+
+.metadati:hover {
+    color: gray; /* Cambia colore al passaggio del mouse */
+}
+
+.metadati.active {
+    font-weight: bold; /* Rende il testo grassetto quando è attivo */
+}
+
+/* Stili per il titolo h1 */
+h1 {
+    font-weight: medium; /* Rende il testo in grassetto */
+    font-size: 100px; /* Aumenta la dimensione del testo */
+    color: rgb(15, 15, 15); /* Colore del testo */
+    text-align: left; /* Allinea a sinistra */
+}
+
+/* Stili per il paragrafo */
+p {
+    font-weight: lighter; /* Rende il testo in grassetto */
+    font-size: 18px; /* Aumenta la dimensione del testo */
+    color: rgb(240, 240, 240); /* Colore del testo */
+    margin-bottom: -10px; /* Margine inferiore di 20px */
+    padding-bottom: 20px; /* Aggiunge spazio sotto il paragrafo */ 
+}
+
+.grid-container {
+    padding-top: 100px; /* Spazio sopra la griglia */
+    display: grid;
+    gap: 40px; /* Distanza tra righe dati diversi */
+    margin-bottom: 100px;
+}
+
+.foto-column {
+    margin-bottom: 40px; /* Aggiunge spazio tra le colonne */
+}
+
+.anno {
+    font-size: 16px; /* Dimensione del testo per anno */
+    text-align: left;
+    margin-bottom: 10px; /* Spazio tra anno e immagini */
+    max-width: auto; /* Larghezza massima */
+    text-transform: capitalize;
+    color: rgb(15, 15, 15);
+}
+
+.foto-container {
+    display: flex; /* Disponi le immagini in linea */
+    flex-wrap: wrap; /* Consentire andare a capo delle immagini */
+    gap: 20px; /* Spazio tra le immagini */
+    margin-top: -30px; /* Serve per regolare altezza foto */
+    margin-left: 200px; /* Aggiunge spazio tra le colonne */
+}
+
+.foto img {
+    width: auto; /* Dimensioni delle immagini */
+    height: 100px; /* Altezza automatica per mantenere le proporzioni */
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute; /* Posizione assoluta per allineare l'icona */
+    top: 20px; /* Distanza dall'alto */
+    right: 20px; /* Distanza dal margine destro */
+    width: 30px; /* Larghezza desiderata */
+    height: 30px; /* Altezza desiderata */
+}
+
+.foto img.fullscreen {
+    position: fixed;
+    top: 50%; /* Posiziona l'elemento a metà dell'altezza dello schermo */
+    left: 50%; /* Posiziona l'elemento a metà della larghezza dello schermo */
+    transform: translate(-50%, -50%); /* Trasla l'elemento al centro del suo contenitore */
+    width: 70%;
+    height: 70%;
+    object-fit: contain; /* Per mantenere l'aspetto proporzionato dell'immagine */
+    z-index: 9999; /* Assicura che l'immagine ingrandita sia sovrapposta a tutti gli altri elementi */
+    opacity: 1; /* Imposta l'opacità a 1 */
+    transition: opacity 0.5s ease-in-out; /* Aggiungi una transizione per l'opacità */
+}
+
+.foto img.fullscreen.show {
+    opacity: 1; /* Porta l'opacità a 1 quando l'immagine è in modalità fullscreen */
+}
+
+.special-button {
+    background-color: #ff0000; /* Rosso */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+   /* Posizionamento */
+    position: absolute;
+    right: 20px; /* Distanza dal bordo destro */
+    top: 20px; /* Distanza dal bordo superiore */
+  }
+
+.footer {
+    text-align: right;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.filetti {
+    border: 0.5px solid rgb(15, 15, 15); /* Aggiunge un contorno nero ai bottoni */
+}
+
+.testi_footer {
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        max-width: 95vw;
+    }
+
+    .button {
+        font-size: 10px;
+        padding: 4px 8px;
+        margin: 2px 4px;
+    }
+
+    .button-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foto-container {
+        margin-left: 0;
+        justify-content: flex-start;
+    }
+}
