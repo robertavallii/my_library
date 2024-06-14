@@ -85,8 +85,6 @@ Un aspetto cruciale del mio progetto è la gestione dei bottoni, i quali permett
         buildHTML(); // Ricostruisci il codice HTML
     });
 ```
-[<img src="./documentazione/valli-roberta_my-lbrary_2.png" width="500" alt="Magic trick">]()
-
 
 
 ## Target e contesto d’uso
