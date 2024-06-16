@@ -6,7 +6,7 @@ Elaborato 1: XS
 
 # My Library
 Autore: Roberta Valli  
-[My Library]([https://ixd-supsi.github.io/2023/esempi/mp_hands/es6/1_landmarks](https://robertavallii.github.io/my_library/))
+[My Library](https://github.com/robertavallii/my_library)
 
 
 ## Introduzione e tema
